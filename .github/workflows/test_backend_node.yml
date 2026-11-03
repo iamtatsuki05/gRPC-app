@@ -20,6 +20,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
+          cache: 'npm'
+          cache-dependency-path: 'backend/node/package-lock.json'
 
       - name: Install Dependencies
         working-directory: backend/node
